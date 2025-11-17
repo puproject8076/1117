@@ -11,7 +11,6 @@ import uuid
 import os
 import time
 from openpyxl import Workbook
-from 語音驗證碼 import *
 from datetime import datetime
 from flask import Flask, request, jsonify
 import requests
@@ -833,4 +832,5 @@ def export_transactions():
         return jsonify({'error': str(e)}), 400
 
 if __name__ == '__main__':
+
     app.run(host='0.0.0.0', port=5000, debug=True)
