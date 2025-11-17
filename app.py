@@ -138,7 +138,9 @@ def products_type(_type, date):
 #     except Exception as e:
 #         return jsonify({'error': f'重設密碼失敗: {str(e)}'}), 400
 
-
+@app.route('/', methods=['GET'])
+def index():
+    return "Invoice Backend Service is running!", 200
 
 
 @app.route('/google_login', methods=['POST'])
@@ -834,3 +836,4 @@ def export_transactions():
 if __name__ == '__main__':
 
     app.run(host='0.0.0.0', port=5000, debug=True)
+
